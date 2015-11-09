@@ -6,8 +6,16 @@
   "scripts": {
     "build": "browserify -t [ babelify --presets [ react ] ] app/components/main.js -o public/bundle.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syltaxue/zhiNengGo.git"
+  },
   "author": "Kenneth Song",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syltaxue/zhiNengGo/issues"
+  },
+  "homepage": "https://github.com/syltaxue/zhiNengGo#readme",
   "dependencies": {
     "babel-core": "^6.0.20",
     "babel-loader": "^6.0.1",
