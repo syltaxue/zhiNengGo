@@ -4,7 +4,7 @@
   "description": "ZhiNengGo",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -t [ babelify --presets [ react ] ] app/components/main.js -o public/bundle.js"
+    "build": "browserify -t [ babelify --presets [ react ] ] app/src/js/main.js -o public/bundle.js"
   },
   "repository": {
     "type": "git",
