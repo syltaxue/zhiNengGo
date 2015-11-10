@@ -1,11 +1,12 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Header = require('./header');
 
 var Home = React.createClass({
 	render: function() {
 		return (
-			<div className = "greeting">
-				<h1> Hello, World! </h1>
+			<div className = "Home">
+				<Header/>
 			</div>
 		);
 	}
