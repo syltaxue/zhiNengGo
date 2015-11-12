@@ -6,13 +6,13 @@ var Header = React.createClass({
 		return (
 			<div className = "header">
 				<div className = "header-container">
-					<div className = "header-container-siteName">
+					<div className = "header-siteName">
 						智能购
 					</div>
-					<div className = "header-container-searchEngine">
+					<div className = "header-searchEngine">
 						搜索
 					</div>
-					<div className = "header-container-login">
+					<div className = "header-login">
 						登陆/注册
 					</div>
 				</div>
