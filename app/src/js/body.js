@@ -7,15 +7,17 @@ var Body = React.createClass({
 			<div className = "body">
 				<div className = "body-container">
 					<div className = "body-recommendText">推荐/精选</div>
-					<ProductItem />
-					<ProductItem />
-					<ProductItem />
-					<ProductItem />
-					<ProductItem />
-					<ProductItem />
-					<ProductItem />
-					<ProductItem />
-					<ProductItem />
+					<div className = "body-products">
+						<ProductItem />
+						<ProductItem />
+						<ProductItem />
+						<ProductItem />
+						<ProductItem />
+						<ProductItem />
+						<ProductItem />
+						<ProductItem />
+						<ProductItem />
+					</div>
 				</div>
 			</div>
 		);

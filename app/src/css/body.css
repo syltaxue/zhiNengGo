@@ -1,3 +1,9 @@
-.body {
+.body-container {
 	background-color: #e5fff4;
+}
+.body-recommendText {
+	padding: 40px;
+}
+.body-products {
+	
 }
