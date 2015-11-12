@@ -1,5 +1,5 @@
 var React = require("react");
-
+var ProductItem = require("./components/productItem");
 
 var Body = React.createClass({
 	render: function() {
@@ -7,14 +7,15 @@ var Body = React.createClass({
 			<div className = "body">
 				<div className = "body-container">
 					<div>推荐/精选</div>
-					<div>单个商品</div>
-					<div>单个商品</div>
-					<div>单个商品</div>
-					<div>单个商品</div>
-					<div>单个商品</div>
-					<div>单个商品</div>
-					<div>单个商品</div>
-					<div>单个商品</div>
+					<ProductItem />
+					<ProductItem />
+					<ProductItem />
+					<ProductItem />
+					<ProductItem />
+					<ProductItem />
+					<ProductItem />
+					<ProductItem />
+					<ProductItem />
 				</div>
 			</div>
 		);
