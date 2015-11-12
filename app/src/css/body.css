@@ -1,9 +1,10 @@
 .body-container {
 	background-color: #e5fff4;
+	margin: 0 100px;
 }
 .body-recommendText {
-	padding: 40px;
+	padding: 40px 0;
 }
 .body-products {
-	
+
 }
