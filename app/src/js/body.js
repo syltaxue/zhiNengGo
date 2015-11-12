@@ -6,7 +6,7 @@ var Body = React.createClass({
 		return (
 			<div className = "body">
 				<div className = "body-container">
-					<div>推荐/精选</div>
+					<div className = "body-recommendText">推荐/精选</div>
 					<ProductItem />
 					<ProductItem />
 					<ProductItem />
