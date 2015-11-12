@@ -5,7 +5,17 @@ var Header = React.createClass({
 	render: function() {
 		return (
 			<div className = "header">
-				<h1> 智能购</h1>
+				<div className = "header-container">
+					<div className = "header-container-siteName">
+						智能购
+					</div>
+					<div className = "header-container-searchEngine">
+						搜索
+					</div>
+					<div className = "header-container-login">
+						登陆/注册
+					</div>
+				</div>
 			</div>
 		);
 	}
