@@ -1,5 +1,5 @@
 var React = require("react");
-
+var RaisedButton = require('material-ui/lib/raised-button');
 
 var Header = React.createClass({
 	render: function() {
@@ -13,11 +13,16 @@ var Header = React.createClass({
 						搜索
 					</div>
 					<div className = "header-login">
-						登陆/注册
+						<RaisedButton label="登陆/注册" onClick={this._onClickLogin} primary={true} />
+						
 					</div>
 				</div>
 			</div>
 		);
+	},
+
+	_onClickLogin: function() {
+		window.alert("Login need to be implemented");
 	}
 });
 
