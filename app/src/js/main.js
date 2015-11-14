@@ -4,6 +4,9 @@ var Header = require('./header');
 var Navigator = require('./navigator');
 var Body = require('./body');
 var Footer = require('./footer');
+// This library is for listening all the events for material-ui
+var injectTapEventPlugin = require("react-tap-event-plugin");
+injectTapEventPlugin();
 
 var Home = React.createClass({
 	render: function() {
