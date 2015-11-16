@@ -8,14 +8,20 @@ var Header = React.createClass({
 				<div className = "header-container">
 					<div className= "row">
 						<div className = "col-sm-1"></div>
-						<div className = "col-xs-5 col-sm-4">
+						<div className = "col-xs-4 col-sm-3">
 							<div className = "header-siteName">
 								智能GO
 							</div>
 						</div>
-						<div className = "col-xs-5 col-sm-4">
+						<div className = "col-xs-6 col-sm-5">
 							<div className = "header-searchEngine">
-								搜索
+								<div className="ui category search">
+									<div className="ui icon input">
+										<input className="prompt" type="text" placeholder="搜索..."/>
+										<i className="search icon"></i>
+									</div>
+									<div className="results"></div>
+								</div>
 							</div>
 						</div>
 						<div className = "col-xs-2 col-sm-2">
