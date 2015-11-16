@@ -18,7 +18,9 @@ var Header = React.createClass({
 								<div className="ui category search">
 									<div className="ui icon input">
 										<input className="prompt" type="text" placeholder="搜索..."/>
-										<i className="search icon"></i>
+										<button className="ui icon button" onClick={this._onClickSearch}>
+											<i className="search icon"></i>
+										</button>
 									</div>
 									<div className="results"></div>
 								</div>
@@ -38,6 +40,10 @@ var Header = React.createClass({
 
 	_onClickLogin: function() {
 		window.alert("Login need to be implemented");
+	},
+
+	_onClickSearch: function() {
+		window.alert("Search clicked");
 	}
 });
 
