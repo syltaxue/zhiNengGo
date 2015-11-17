@@ -1,5 +1,7 @@
 var React = require("react");
 var ProductItem = require("./components/productItem");
+var IconButton = require('material-ui/lib/icon-button');
+
 
 var Body = React.createClass({
 	render: function() {
@@ -29,7 +31,7 @@ var Body = React.createClass({
 				</div>
 			</div>
 		);
-	}
+	},
 });
 
 module.exports = Body;

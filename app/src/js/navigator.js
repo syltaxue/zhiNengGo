@@ -1,6 +1,12 @@
 var React = require("react");
-
-
+var DropDownMenu = require('material-ui/lib/drop-down-menu');
+var menuItems = [
+   { payload: '1', text: '分类' },
+   { payload: '2', text: '类型1' },
+   { payload: '3', text: '类型2' },
+   { payload: '4', text: '类型3' },
+   { payload: '5', text: '类型4' },
+];
 var Navigator = React.createClass({
 	render: function() {
 		return (
@@ -8,10 +14,11 @@ var Navigator = React.createClass({
 				<div className = "navigator-container">
 					<div className = "navigator-buttons">
 						<div className = "navigator-buttons-button-firstChild">首页</div>
-						<div className = "navigator-buttons-button">分类1</div>
-						<div className = "navigator-buttons-button">分类2</div>
-						<div className = "navigator-buttons-button">分类3</div>
-						<div className = "navigator-buttons-button">分类4</div>
+            	   
+      				<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
+						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
+						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
+						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
 					</div>
 					<div className = "navigator-picture">
 						<div>图片</div>
@@ -19,7 +26,8 @@ var Navigator = React.createClass({
 				</div>
 			</div>
 		);
-	}
+	},
+
 });
 
 module.exports = Navigator;
