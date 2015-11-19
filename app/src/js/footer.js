@@ -6,9 +6,8 @@ var Footer = React.createClass({
 		return (
 			<div className = "footer">
 				<div className = "footer-container">
-					<div>版权 CopyRight, bla</div>
-					<div>关于我们</div>
-					<div>联系我们</div>
+					<div>©2015 Zhinenggo.com 智能购科技有限公司 电信与信息业务经营许可证000000号 沪ICP备00000000号-1</div>
+					<div>首页 | 商务合作 | 联系我们 | 地址：| 电话：</div>	
 				</div>
 			</div>
 		);
