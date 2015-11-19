@@ -7,3 +7,16 @@
 .body-products {
 
 }
+.ui.right.rail {
+	padding: 0;
+	margin: 0;
+	width: 100px;
+}
+.ui.sticky {
+	position: fixed;
+		bottom: 30px;
+}
+.ui.sticky.fixed.top{
+	bottom: 30px;
+	top: initial;
+}
