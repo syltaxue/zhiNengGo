@@ -12,9 +12,11 @@ var Body = React.createClass({
 					</div>
 					<div className = "col-xs-12 col-sm-9">
 						<div className="ui right rail">
-					<div className = "ui bound bottom sticky">
-						top
-					</div>
+							<div className = "ui bound bottom sticky">
+								<button className="ui icon button" onClick={this.scrollToTop}>
+									<i className="arrow up icon"></i>
+								</button>
+							</div>
 						</div>
 						<div className = "body">
 							<div className = "body-container">
@@ -65,6 +67,10 @@ var Body = React.createClass({
 			</div>
 		);
 	},
+
+	scrollToTop: function() {
+		window.scrollTo(0, 0);
+	}
 });
 
 module.exports = Body;

@@ -18,7 +18,7 @@ var Header = React.createClass({
 								<div className="ui category search">
 									<div className="ui icon input">
 										<input className="prompt" type="text" placeholder="搜索..."/>
-										<button className="ui icon button" onClick={this._onClickSearch}>
+										<button className="ui icon button" id="header-Search-Icon" onClick={this._onClickSearch} >
 											<i className="search icon"></i>
 										</button>
 									</div>
