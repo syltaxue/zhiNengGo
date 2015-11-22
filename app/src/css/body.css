@@ -7,6 +7,12 @@
 .body-products {
 
 }
+.body-loadMoreBtn {
+	width: 100%;
+}
+#loadMoreBtn {
+	width: 100%;
+}
 .ui.right.rail {
 	padding: 0;
 	margin: 0;
@@ -14,9 +20,14 @@
 }
 .ui.sticky {
 	position: fixed;
-		bottom: 30px;
+		bottom: 50px;
 }
-.ui.sticky.fixed.top{
-	bottom: 30px;
+.ui.sticky.fixed.top {
+	bottom: 50px;
 	top: initial;
+}
+
+.ui.sticky.bound.bottom {
+	bottom: 50px;
+	position: fixed;
 }
