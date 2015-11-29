@@ -14,6 +14,6 @@ render((
 		<Route path="/" component={Main}>
 			<Route path="#" component={Main}/>
 		</Route>
-		<Route path="/product" component={ProductPage}/>
+		<Route path="/product/:productId" component={ProductPage}/>
 	</Router>
 ), document.getElementById("app"));

@@ -61,7 +61,7 @@ var Body = React.createClass({
 		var arrayContainer = Array.apply(null, Array(this.state.numberOfProducts)).map(function () {});
 		var products = arrayContainer.map(function(item, index) {
 			return (
-				<ProductItem key={index}/>
+				<ProductItem id={index} key={index}/>
 			);
 		});
 

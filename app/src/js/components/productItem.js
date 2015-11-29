@@ -11,7 +11,7 @@ var ProductItem = React.createClass({
 					</div>
 					<a className="ui basic red left pointing label">1,048</a>
 				</div>
-				<Link to="/product">link</Link>
+				<Link to={`/product/${this.props.id}`}>link</Link>
 			</div>
 		);
 	}
