@@ -1,5 +1,6 @@
 var React = require("react");
 var RaisedButton = require('material-ui/lib/raised-button');
+var Link = require('react-router').Link;
 
 var Header = React.createClass({
 	render: function() {

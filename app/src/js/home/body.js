@@ -1,5 +1,5 @@
 var React = require("react");
-var ProductItem = require("./components/productItem");
+var ProductItem = require("./../components/productItem");
 var IconButton = require('material-ui/lib/icon-button');
 
 
