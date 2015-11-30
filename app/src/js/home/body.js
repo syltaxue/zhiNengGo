@@ -1,5 +1,5 @@
 var React = require("react");
-var ProductItem = require("./components/productItem");
+var ProductItem = require("./../components/productItem");
 var IconButton = require('material-ui/lib/icon-button');
 
 
@@ -27,7 +27,9 @@ var Body = React.createClass({
 						<div className = "body">
 							<div className = "body-container">
 								<div className = "body-recommendText">推荐/精选</div>
-								{this.renderProducts()}
+								<div className = "body-products">
+									{this.renderProducts()}
+								</div>
 								<div className = "body-loadMoreBtn">
 									{this.renderLoadMoreBtn()}
 								</div>
@@ -61,7 +63,7 @@ var Body = React.createClass({
 		var arrayContainer = Array.apply(null, Array(this.state.numberOfProducts)).map(function () {});
 		var products = arrayContainer.map(function(item, index) {
 			return (
-				<ProductItem key={index}/>
+				<ProductItem id={index} key={index}/>
 			);
 		});
 
