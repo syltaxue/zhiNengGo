@@ -27,7 +27,9 @@ var Body = React.createClass({
 						<div className = "body">
 							<div className = "body-container">
 								<div className = "body-recommendText">推荐/精选</div>
-								{this.renderProducts()}
+								<div className = "body-products">
+									{this.renderProducts()}
+								</div>
 								<div className = "body-loadMoreBtn">
 									{this.renderLoadMoreBtn()}
 								</div>

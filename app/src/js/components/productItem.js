@@ -4,7 +4,8 @@ var Link = require('react-router').Link
 var ProductItem = React.createClass({
 	render: function() {
 		return (
-			<div className = "productItem">单个商品
+			<div className = "productItem">
+				<div className="productItem-picture"/>
 				<div className="ui labeled button" tabIndex="0">
 					<div className="ui red button">
 						<i className="heart icon"></i> Like

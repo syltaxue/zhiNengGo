@@ -1,8 +1,9 @@
 .productItem {
 	border-color: #6495ED;
+	border-radius: 20px;
 	border-style: solid;
 	display: inline-block;
-	height: 200px;
+	height: 300px;
 	margin: 40px;
-	width: 200px;
+	width: 250px;
 }
