@@ -1,11 +1,13 @@
 .body-container {
-	background-color: #e5fff4;
+	background-color: white;
 }
 .body-recommendText {
 	padding: 40px 0;
 }
 .body-products {
-
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .body-loadMoreBtn {
 	width: 100%;
