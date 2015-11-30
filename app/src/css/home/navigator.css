@@ -1,13 +1,14 @@
 .navigator {
-	background-color: #b3ffff;
 	display: flex;
 	flex-direction: column;
 }
-	.navigator-container {
-		height: 200px;
-		margin: 20px;
+	.navigator-picture {
+		height: 400px;
+		background-color: antiquewhite;
+		margin: 20px 50px;
 	}
 	.navigator-buttons {
+		background-color: blueviolet;
 		display: flex;
 	}
 		.navigator-buttons-button {
