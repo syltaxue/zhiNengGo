@@ -19,9 +19,6 @@ var Navigator = React.createClass({
 						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
 						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
 					</div>
-					<div className = "navigator-picture">
-						<div>图片</div>
-					</div>
 				</div>
 			</div>
 		);
