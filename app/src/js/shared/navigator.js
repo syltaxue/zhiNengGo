@@ -1,5 +1,6 @@
 var React = require("react");
 var DropDownMenu = require('material-ui/lib/drop-down-menu');
+var Link = require('react-router').Link
 var menuItems = [
 	{ payload: '1', text: '分类' },
 	{ payload: '2', text: '类型1' },
@@ -18,9 +19,6 @@ var Navigator = React.createClass({
 						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
 						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
 						<div className = "navigator-buttons-button"><DropDownMenu menuItems={menuItems} /></div>
-					</div>
-					<div className = "navigator-picture">
-						<div>图片</div>
 					</div>
 				</div>
 			</div>
