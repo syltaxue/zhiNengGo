@@ -18,6 +18,9 @@
 		.navigator-buttons-button {
 			width: 150px;
 		}
+			.navigator-buttons-button.active {
+				background-color: #49008E;
+			}
 		.navigator-buttons-text {
 			color: #FFF;
 		}
