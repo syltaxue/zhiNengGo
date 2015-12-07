@@ -22,10 +22,9 @@ var Product = React.createClass({
 						<div className = "col-sm-1">
 						</div>
 						<div className = "col-xs-12 col-sm-10">
-							<div className="ui right rail">
-							</div>
-							Product1 文字介绍
-							<Picture/>
+							<div className="ui right rail"></div>
+							<div className="product-description">Product1 文字介绍</div>
+							<div className='product-picture'><Picture/></div>
 							<RaisedButton label="查看详情" onClick={this._onClicktoDetail} primary={true} />
 							Product ID:{this.props.productId}
 						</div>
