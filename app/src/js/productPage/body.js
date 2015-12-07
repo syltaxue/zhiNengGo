@@ -25,7 +25,17 @@ var Product = React.createClass({
 							<div className="ui right rail"></div>
 							<div className="product-description">Product1 文字介绍</div>
 							<div className='product-picture'><Picture/></div>
+							<div class="ui fluid icon input">
+  								<input className="prompt" type="text" placeholder="Comment"/>
+  								<button className="ui icon button" id="comment outline icon">
+									<i class="comment outline icon"></i>
+								</button>
+  							</div>
 							<RaisedButton label="查看详情" onClick={this._onClicktoDetail} primary={true} />
+								<div className="share-button">分享到</div>
+								<button className="ui icon button" id="facebook square icon">
+									<i class="facebook square icon"></i>
+								</button>
 							Product ID:{this.props.productId}
 						</div>
 						<div className = "col-sm-1">
