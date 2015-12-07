@@ -16,3 +16,6 @@
 		.navigator-buttons-button {
 			margin-left: 15px;
 		}
+		.navigator-buttons-text {
+			color: initial;
+		}
