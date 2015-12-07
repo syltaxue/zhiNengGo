@@ -18,7 +18,8 @@
 		.navigator-buttons-button {
 			width: 150px;
 		}
-			.navigator-buttons-button.active {
+
+			.navigator-buttons-button.active,.navigator-buttons-button:hover {
 				background-color: #49008E;
 			}
 		.navigator-buttons-text {
