@@ -14,15 +14,25 @@ var Navigator = React.createClass({
 		return (
 			<div className = "navigator ui sticky">
 				<div className = "navigator-container">
-					<div className = "navigator-buttons">
-						<div className="ui menu">
-							<div className = "item">
-								<Link className="navigator-buttons-text" to={'/'}>首页</Link>
-							</div>
-							{this._renderTypeA()}
-							{this._renderTypeB()}
-							{this._renderTypeC()}
-							{this._renderTypeD()}
+					<div className = "row">
+						<div className = "col-sm-1">
+						</div>
+						<div className = "col-xs-12 col-sm-10">
+								<div className = "navigator-buttons">
+									<div className="ui menu">
+										<div className="navigator-buttons-button">
+											<div className = "item">
+												<Link className="navigator-buttons-text" to={'/'}>首页</Link>
+											</div>
+										</div>
+										{this._renderTypeA()}
+										{this._renderTypeB()}
+										{this._renderTypeC()}
+										{this._renderTypeD()}
+									</div>
+								</div>
+						</div>
+						<div className = "col-sm-1">
 						</div>
 					</div>
 				</div>
@@ -32,13 +42,17 @@ var Navigator = React.createClass({
 
 	_renderTypeA: function() {
 		return(
-			<div className="ui simple dropdown item">
-				分类1
-				<i className="dropdown icon"></i>
-				<div className="menu">
-					<div className="item">类型1</div>
-					<div className="item">类型2</div>
-					<div className="item">类型3</div>
+			<div className="navigator-buttons-button">
+				<div className="ui simple dropdown item">
+					<div className="navigator-buttons-text">
+						分类1
+					</div>
+					<i className="dropdown icon navigator-buttons-text"></i>
+					<div className="menu">
+						<div className="item">类型1</div>
+						<div className="item">类型2</div>
+						<div className="item">类型3</div>
+					</div>
 				</div>
 			</div>
 		);
@@ -46,13 +60,17 @@ var Navigator = React.createClass({
 
 	_renderTypeB: function() {
 		return(
-			<div className="ui simple dropdown item">
-				分类2
-				<i className="dropdown icon"></i>
-				<div className="menu">
-					<div className="item">类型1</div>
-					<div className="item">类型2</div>
-					<div className="item">类型3</div>
+			<div className="navigator-buttons-button">
+				<div className="ui simple dropdown item">
+					<div className="navigator-buttons-text">
+						分类2
+					</div>
+					<i className="dropdown icon navigator-buttons-text"></i>
+					<div className="menu">
+						<div className="item">类型1</div>
+						<div className="item">类型2</div>
+						<div className="item">类型3</div>
+					</div>
 				</div>
 			</div>
 		);
@@ -60,13 +78,17 @@ var Navigator = React.createClass({
 
 	_renderTypeC: function() {
 		return(
-			<div className="ui simple dropdown item">
-				分类3
-				<i className="dropdown icon"></i>
-				<div className="menu">
-					<div className="item">类型1</div>
-					<div className="item">类型2</div>
-					<div className="item">类型3</div>
+			<div className="navigator-buttons-button">
+				<div className="ui simple dropdown item">
+					<div className="navigator-buttons-text">
+						分类3
+					</div>
+					<i className="dropdown icon navigator-buttons-text"></i>
+					<div className="menu">
+						<div className="item">类型1</div>
+						<div className="item">类型2</div>
+						<div className="item">类型3</div>
+					</div>
 				</div>
 			</div>
 		);
@@ -74,13 +96,17 @@ var Navigator = React.createClass({
 
 	_renderTypeD: function() {
 		return(
-			<div className="ui simple dropdown item">
-				分类4
-				<i className="dropdown icon"></i>
-				<div className="menu">
-					<div className="item">类型1</div>
-					<div className="item">类型2</div>
-					<div className="item">类型3</div>
+			<div className="navigator-buttons-button">
+				<div className="ui simple dropdown item">
+					<div className="navigator-buttons-text">
+						分类4
+					</div>
+					<i className="dropdown icon navigator-buttons-text"></i>
+					<div className="menu">
+						<div className="item">类型1</div>
+						<div className="item">类型2</div>
+						<div className="item">类型3</div>
+					</div>
 				</div>
 			</div>
 		);
