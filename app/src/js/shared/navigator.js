@@ -11,7 +11,7 @@ var menuItems = [
 var Navigator = React.createClass({
 	render: function() {
 		return (
-			<div className = "navigator">
+			<div className = "navigator ui sticky">
 				<div className = "navigator-container">
 					<div className = "navigator-buttons">
 						<div className = "navigator-buttons-button-firstChild">首页</div>
