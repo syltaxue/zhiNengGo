@@ -4,16 +4,39 @@ var Picture = require('./../shared/Picture');
 var RaisedButton = require('material-ui/lib/raised-button');
 
 var Product = React.createClass({
+
+	componentDidMount: function() {
+		// Have the navigator stick to the page while scrolling
+		$('.ui.sticky')
+			.sticky({
+				bottomOffset: 50,
+				context: '#bodyContext'
+		});
+	},
+
 	render: function() {
 		return (
 			<div className = "productContainer">
-				Product1 文字介绍
-				<Picture/>
-				<RaisedButton label="查看详情" onClick={this._onClicktoDetail} primary={true} />
-				Product ID:{this.props.productId}
+				<div id ="bodyContext">
+					<div className = "row">
+						<div className = "col-sm-1">
+						</div>
+						<div className = "col-xs-12 col-sm-10">
+							<div className="ui right rail">
+							</div>
+							Product1 文字介绍
+							<Picture/>
+							<RaisedButton label="查看详情" onClick={this._onClicktoDetail} primary={true} />
+							Product ID:{this.props.productId}
+						</div>
+						<div className = "col-sm-1">
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	},
+
 	_onClicktoDetail: function() {
 		window.alert("Website link");
 	}
