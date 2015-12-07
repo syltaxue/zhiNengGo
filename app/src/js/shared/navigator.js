@@ -2,15 +2,17 @@ var React = require("react");
 var DropDownMenu = require('material-ui/lib/drop-down-menu');
 var Link = require('react-router').Link
 
-var menuItems = [
-	{ payload: '1', text: '分类' },
-	{ payload: '2', text: '类型1' },
-	{ payload: '3', text: '类型2' },
-	{ payload: '4', text: '类型3' },
-	{ payload: '5', text: '类型4' }
-];
 var Navigator = React.createClass({
+	getInitialState: function() {
+		return ({active: 'home'});
+	},
+	shouldComponentUpdate: function(nextProps, nextState) {
+		if (this.props !== nextProps) return true;
+		if (this.state && this.state.active !== nextState.active) return true;
+		return false;
+	},
 	render: function() {
+		var homeButtonState = this.state.active === 'home' ? ' active' : '';
 		return (
 			<div className = "navigator ui sticky">
 				<div className = "navigator-container">
@@ -20,8 +22,8 @@ var Navigator = React.createClass({
 						<div className = "col-xs-12 col-sm-10">
 								<div className = "navigator-buttons">
 									<div className="ui menu">
-										<div className="navigator-buttons-button">
-											<div className = "item">
+										<div className={"navigator-buttons-button" + homeButtonState}>
+											<div className = "item" onClick={this._handleClick.bind(this, 'home')}>
 												<Link className="navigator-buttons-text" to={'/'}>首页</Link>
 											</div>
 										</div>
@@ -41,17 +43,18 @@ var Navigator = React.createClass({
 	},
 
 	_renderTypeA: function() {
+		var buttonState = this.state.active === 'TypeA' ? ' active' : '';
 		return(
-			<div className="navigator-buttons-button">
+			<div className={"navigator-buttons-button" + buttonState}>
 				<div className="ui simple dropdown item">
 					<div className="navigator-buttons-text">
 						分类1
 					</div>
 					<i className="dropdown icon navigator-buttons-text"></i>
 					<div className="menu">
-						<div className="item">类型1</div>
-						<div className="item">类型2</div>
-						<div className="item">类型3</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeA')}>类型1</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeA')}>类型2</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeA')}>类型3</div>
 					</div>
 				</div>
 			</div>
@@ -59,17 +62,18 @@ var Navigator = React.createClass({
 	},
 
 	_renderTypeB: function() {
+		var buttonState = this.state.active === 'TypeB' ? ' active' : '';
 		return(
-			<div className="navigator-buttons-button">
+			<div className={"navigator-buttons-button" + buttonState}>
 				<div className="ui simple dropdown item">
 					<div className="navigator-buttons-text">
 						分类2
 					</div>
 					<i className="dropdown icon navigator-buttons-text"></i>
 					<div className="menu">
-						<div className="item">类型1</div>
-						<div className="item">类型2</div>
-						<div className="item">类型3</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeB')}>类型1</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeB')}>类型2</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeB')}>类型3</div>
 					</div>
 				</div>
 			</div>
@@ -77,17 +81,18 @@ var Navigator = React.createClass({
 	},
 
 	_renderTypeC: function() {
+		var buttonState = this.state.active === 'TypeC' ? ' active' : '';
 		return(
-			<div className="navigator-buttons-button">
+			<div className={"navigator-buttons-button" + buttonState}>
 				<div className="ui simple dropdown item">
 					<div className="navigator-buttons-text">
 						分类3
 					</div>
 					<i className="dropdown icon navigator-buttons-text"></i>
 					<div className="menu">
-						<div className="item">类型1</div>
-						<div className="item">类型2</div>
-						<div className="item">类型3</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeC')}>类型1</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeC')}>类型2</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeC')}>类型3</div>
 					</div>
 				</div>
 			</div>
@@ -95,21 +100,26 @@ var Navigator = React.createClass({
 	},
 
 	_renderTypeD: function() {
+		var buttonState = this.state.active === 'TypeD' ? ' active' : '';
 		return(
-			<div className="navigator-buttons-button">
+			<div className={"navigator-buttons-button" + buttonState}>
 				<div className="ui simple dropdown item">
 					<div className="navigator-buttons-text">
 						分类4
 					</div>
 					<i className="dropdown icon navigator-buttons-text"></i>
 					<div className="menu">
-						<div className="item">类型1</div>
-						<div className="item">类型2</div>
-						<div className="item">类型3</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeD')}>类型1</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeD')}>类型2</div>
+						<div className="item" onClick={this._handleClick.bind(this, 'TypeD')}>类型3</div>
 					</div>
 				</div>
 			</div>
 		);
+	},
+
+	_handleClick: function(type) {
+		this.setState({active: type});
 	}
 });
 
