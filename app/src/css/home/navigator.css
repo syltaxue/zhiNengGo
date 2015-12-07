@@ -26,3 +26,7 @@
 	background: initial;
 	border: initial;
 }
+
+.item {
+	justify-content: center;
+}
