@@ -10,6 +10,16 @@ var Body = React.createClass({
 			numberOfProducts: 10
 		};
 	},
+
+	componentDidMount: function() {
+		// Have the navigator stick to the page while scrolling
+		$('.ui.sticky')
+			.sticky({
+				bottomOffset: 50,
+				context: '#bodyContext'
+		});
+	},
+
 	render: function() {
 		return (
 			<div id ="bodyContext">

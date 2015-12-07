@@ -10,7 +10,7 @@ var ProductItem = React.createClass({
 					<div className="ui red button">
 						<i className="heart icon"></i> Like
 					</div>
-					<a className="ui basic red left pointing label">1,048</a>
+					<a className="ui basic red left pointing label">0</a>
 				</div>
 				<Link to={`/product/${this.props.id}`}>link</Link>
 			</div>
