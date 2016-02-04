@@ -17,10 +17,10 @@ git clone https://github.com/syltaxue/zhiNengGo.git
   cd to your project folder e.g. cd xxx/zhinenggo/
   2:   
   npm install   
-  3:   
-  sudo npm install browserify -g
-  4:
-  sudo npm install gulp -g
-  5:
-  cd /zhinenggo/semantic/
+  3:  
+  sudo npm install browserify -g   
+  4:   
+  sudo npm install gulp -g   
+  5:   
+  cd /zhinenggo/semantic/   
   gulp build
