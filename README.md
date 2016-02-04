@@ -13,14 +13,14 @@ In terminal:
 git clone https://github.com/syltaxue/zhiNengGo.git
 
 3: Install all the dependency libraries
-  1:   
+  a:   
   cd to your project folder e.g. cd xxx/zhinenggo/
-  2:   
+  b:   
   npm install   
-  3:  
+  c:  
   sudo npm install browserify -g   
-  4:   
+  d:   
   sudo npm install gulp -g   
-  5:   
+  e:   
   cd /zhinenggo/semantic/   
   gulp build
