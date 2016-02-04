@@ -10,5 +10,12 @@ https://nodejs.org/en/
 
 2:  Download this project from git   
 In terminal:
-git clone
+git clone https://github.com/syltaxue/zhiNengGo.git
 
+3: Install all the dependency libraries
+1:   
+cd to your project folder e.g. xxx/zhinenggo/
+2:   
+npm install   
+3:   
+sudo npm install browserify -g
