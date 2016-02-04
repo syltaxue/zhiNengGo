@@ -14,7 +14,7 @@ git clone https://github.com/syltaxue/zhiNengGo.git
 
 3: Install all the dependency libraries
 1:   
-cd to your project folder e.g. xxx/zhinenggo/
+cd to your project folder e.g. cd xxx/zhinenggo/
 2:   
 npm install   
 3:   
