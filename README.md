@@ -9,9 +9,10 @@ Todo: need to modify the install process!!!11!!!
 https://nodejs.org/en/  
 
 2:  Download this project from git   
-In terminal:
-git clone https://github.com/syltaxue/zhiNengGo.git
-
+You can use either terminal or sourcetree to download the project.   
+In terminal:   
+git clone https://github.com/syltaxue/zhiNengGo.git   
+In SourceTree download the project from the link above   
 3: Install all the dependency libraries
   a:   
   cd to your project folder e.g. cd xxx/zhinenggo/
