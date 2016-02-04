@@ -21,4 +21,4 @@ In SourceTree download the project from the link above
   sudo npm install gulp -g   
   e:   
   cd /zhinenggo/semantic/   
-  gulp build
+  gulp build   
