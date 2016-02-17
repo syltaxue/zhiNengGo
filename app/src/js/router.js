@@ -8,7 +8,6 @@ var injectTapEventPlugin = require("react-tap-event-plugin");
 var Main = require('./home/main');
 var ProductPage = require('./productPage/main');
 injectTapEventPlugin();
-
 render((
 	<Router>
 		<Route path="/" component={Main}>
