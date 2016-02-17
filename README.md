@@ -12,7 +12,7 @@ git clone https://github.com/syltaxue/zhiNengGo.git
 In SourceTree download the project from the link above   
 3: Install all the dependency libraries   
   a:    
-  cd to your project folder e.g. cd xxx/zhinenggo/
+  cd to your project folder e.g. cd xxx/zhinenggo/   
   b:   
   npm install   
   c:  
