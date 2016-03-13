@@ -7,10 +7,10 @@ var Body = require('./body');
 var Footer = require('./../shared/footer');
 var Home = React.createClass({
 	componentDidMount: function() {
-		socket.on('comments', function (comments) {
-			console.log("received comments : ", comments);
-		});
-		socket.emit('fetchComments');
+		// socket.on('comments', function (comments) {
+		// 	console.log("received comments : ", comments);
+		// });
+		// socket.emit('fetchComments');
 	},
 
 	render: function() {
