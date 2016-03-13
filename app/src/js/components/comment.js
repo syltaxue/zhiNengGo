@@ -23,7 +23,7 @@ var Comment = React.createClass({
             x ea commodo consequat.
           </div>
           <div className="comments-like">
-            <div className="ui labeled button" tabindex="0">
+            <div className="ui labeled button" tabIndex="0">
               <div className="ui button"><i className="thumbs up icon"></i> 赞 </div>
               <a className="ui basic label">5 </a>
             </div>

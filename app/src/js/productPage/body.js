@@ -39,8 +39,7 @@ var Product = React.createClass({
 									{this.renderComments()}
 									{this.renderLoadMoreBtn()}
 								</div>
-
-				      </div>
+						</div>
 							<RaisedButton label="查看详情" onClick={this._onClicktoDetail} primary={true} />
 								<div className="share-button">分享到</div>
 								<button className="ui icon button" id="facebook square icon">
@@ -61,7 +60,7 @@ var Product = React.createClass({
 	},
 
 	renderLoadMoreBtn: function() {
-		if(this.state.numberOfComments != commentTotal){
+		if (this.state.numberOfComments <= commentTotal) {
 			if (this.state.loadingMoreItem) {
 				return (
 					<button className="ui loading button" id="loadMoreBtn">Loading</button>
@@ -71,7 +70,7 @@ var Product = React.createClass({
 					<button className="ui button" id="loadMoreBtn" onClick={this.loadMoreComments}>点击加载更多评论</button>
 				);
 			}
-		}else{
+		} else {
 			if (this.state.loadingMoreItem) {
 				return (
 					<button className="ui loading button" id="loadMoreBtn">Loading</button>
@@ -85,10 +84,10 @@ var Product = React.createClass({
 
 	},
 	lessComments: function() {
-			this.setState({
-				loadingMoreItem: true,
-				numberOfComments: 5
-			});
+		this.setState({
+			loadingMoreItem: true,
+			numberOfComments: 5
+		});
 		setTimeout(function(){
 			this.setState({
 				loadingMoreItem: false
@@ -97,18 +96,17 @@ var Product = React.createClass({
 	},
 
 	loadMoreComments: function() {
-		if((this.state.numberOfComments + 10) > commentTotal){
+		if ((this.state.numberOfComments + 10) > commentTotal) {
 			this.setState({
 				loadingMoreItem: true,
 				numberOfComments: commentTotal
 			});
-		}else{
+		} else {
 			this.setState({
 				loadingMoreItem: true,
 				numberOfComments: this.state.numberOfComments + 10
 			});
 		}
-
 
 		setTimeout(function(){
 			this.setState({
@@ -135,7 +133,7 @@ var Product = React.createClass({
 	renderGetTitle: function() {
 		return (
 			<div className="comment-title">
-				<h3 class="ui dividing header">全部评论: {commentTotal}</h3>
+				<h3 className="ui dividing header">全部评论: {commentTotal}</h3>
 			</div>
 		);
 	},
