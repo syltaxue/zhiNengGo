@@ -1,19 +1,13 @@
 var path = require('path');
 var fs = require('fs');
 var express = require('express');
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-	host : 'localhost',
-	user : 'root',
-	password : '19930208',
-	database : 'cs304'
-});
+var connection = require(__dirname + '/connection');
+var test = require(__dirname + '/test');
 
 // Create an express instance and set a port variable
-
 var app = express();
-// app.use('/', express.static(path.join(__dirname, 'public')));
 
+// Test connection
 connection.connect(function(err){
 	if (!err) {
 		console.log("Database is connected ...");    
@@ -29,13 +23,11 @@ connection.connect(function(err){
 var server = app.listen(80);
 console.log('Server listening on port 80');
 
-connection.query('SELECT * from recipes', function(err, rows, fields) {
-connection.end();
-if (!err)
-	console.log('The query result from database is: ', rows);
-else
-	console.log('Error while performing Query.');
-});
+
+// Test query
+var testInstance = new test();
+testInstance.sendComments();
+
 
 // Socket.IO part
 var io = require('socket.io')(server);
