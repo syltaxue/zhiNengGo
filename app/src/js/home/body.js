@@ -1,9 +1,10 @@
 var React = require("react");
+var Reflux = require("reflux");
 var ProductItem = require("./../components/productItem");
 var IconButton = require('material-ui/lib/icon-button');
-
-
+var productStore = require("./../stores/productStore");
 var Body = React.createClass({
+	mixins: [Reflux.connect(productStore,"productList")],
 	getInitialState: function() {
 		return {
 			loadingMoreItem: false,
@@ -21,6 +22,7 @@ var Body = React.createClass({
 	},
 
 	render: function() {
+		console.log(this.state);
 		return (
 			<div id ="bodyContext">
 				<div className = "row">
