@@ -3,6 +3,8 @@ var Reflux = require("reflux");
 var ProductItem = require("./../components/productItem");
 var IconButton = require('material-ui/lib/icon-button');
 var productStore = require("./../stores/productStore");
+var productActions = require("./../actions/productActions");
+
 var Body = React.createClass({
 	mixins: [Reflux.connect(productStore,"productList")],
 	getInitialState: function() {
@@ -13,6 +15,7 @@ var Body = React.createClass({
 	},
 
 	componentDidMount: function() {
+		// productActions.fetchProducts();
 		// Have the navigator stick to the page while scrolling
 		$('.ui.sticky')
 			.sticky({
