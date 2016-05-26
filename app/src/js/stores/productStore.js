@@ -14,7 +14,7 @@ var productStore = Reflux.createStore({
     },
     onFetchProducts: function() {
         // fetch products
-        var fetchProducts = new fetchProducts();
+        var fetchProducts = fetchProducts.fetchProducts();
         // var productsServer = fetchProducts.fetchProducts();
         // Get all products here
         console.log("products from server: ", products);
@@ -30,6 +30,7 @@ var productStore = Reflux.createStore({
             id: 1,
             description: "something"
         }];
+        return this.products;
     }
 });
 
