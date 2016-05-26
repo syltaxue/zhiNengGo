@@ -15,7 +15,7 @@ var Body = React.createClass({
 	},
 
 	componentDidMount: function() {
-		// productActions.fetchProducts();
+		productActions.fetchProducts();
 		// Have the navigator stick to the page while scrolling
 		$('.ui.sticky')
 			.sticky({

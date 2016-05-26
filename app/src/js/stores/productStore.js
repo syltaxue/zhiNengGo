@@ -1,6 +1,6 @@
 var Reflux = require("reflux");
 var productActions = require("./../actions/productActions");
-
+var fetchProducts = require('./../../server/fetchProducts');
 var products = {};
 
 var productStore = Reflux.createStore({
@@ -13,12 +13,12 @@ var productStore = Reflux.createStore({
         };
     },
     onFetchProducts: function() {
+        // fetch products
+        var fetchProducts = new fetchProducts();
+        // var productsServer = fetchProducts.fetchProducts();
         // Get all products here
-        products[product.id] = {
-            id: product.id,
-            description: product.description
-        };
-        updateList(this.products);
+        console.log("products from server: ", products);
+        this.updateList(this.products);
     },
     // called whenever we change a list. normally this would mean a database API call
     updateList: function(products){

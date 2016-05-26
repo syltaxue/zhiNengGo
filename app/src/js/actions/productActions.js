@@ -4,3 +4,5 @@ var productActions = Reflux.createActions([
     'fetchProducts',
     'addProduct'
     ]);
+
+module.exports = productActions;

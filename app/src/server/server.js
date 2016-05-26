@@ -2,7 +2,7 @@ var path = require('path');
 var fs = require('fs');
 var express = require('express');
 var connection = require(__dirname + '/connection');
-var test = require(__dirname + '/test');
+var fetchProducts = require(__dirname + '/fetchProducts');
 
 // Create an express instance and set a port variable
 var app = express();
@@ -23,18 +23,12 @@ connection.connect(function(err){
 var server = app.listen(80);
 console.log('Server listening on port 80');
 
-
-// Test query
-var testInstance = new test();
-testInstance.sendComments();
-
-
 // Socket.IO part
 var io = require('socket.io')(server);
 
-var sendComments = function (socket) {
-	socket.emit('comments', "hello, sending initial fetches");
-};
+// var sendComments = function (socket) {
+// 	socket.emit('comments', "hello, sending initial fetches");
+// };
 
 io.on('connection', function (socket) {
 	console.log('New client connected!');
