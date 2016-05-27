@@ -2,21 +2,19 @@ var path = require('path');
 var fs = require('fs');
 var express = require('express');
 var connection = require(__dirname + '/connection');
-var fetchProducts = require(__dirname + '/fetchProducts');
+// var fetchProducts = require(__dirname + '/fetchProducts');
 
 // Create an express instance and set a port variable
 var app = express();
 
 // Test connection
-connection.connect(function(err){
-	if (!err) {
-		console.log("Database is connected ...");    
-	} else {
-		console.log("Error connecting database :", err);    
-	}
-});
-
-
+// connection.connect(function(err){
+// 	if (!err) {
+// 		console.log("Database is connected ...");    
+// 	} else {
+// 		console.log("Error connecting database :", err);    
+// 	}
+// });
 
 
 
@@ -27,7 +25,7 @@ console.log('Server listening on port 80');
 var io = require('socket.io')(server);
 
 io.on('connection', function (socket) {
-	console.log('New client connected!');
+	console.log('New client connected, socket ID: ', socket.id);
 
 	socket.on('init', function () {
 		console.log('init!');
@@ -35,7 +33,6 @@ io.on('connection', function (socket) {
 
 	socket.on('fetchProducts', function () {
 		connection.query('SELECT * from product', function(err, rows, fields) {
-			connection.end();
 			if (err)
 				console.log('Error while performing Query.');
 			else 

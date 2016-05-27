@@ -1,6 +1,5 @@
 var Reflux = require("reflux");
 var productActions = require("./../actions/productActions");
-var fetchProducts = require('./../../server/fetchProducts');
 var products = {};
 
 var productStore = Reflux.createStore({
