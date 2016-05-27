@@ -5,13 +5,17 @@ var ProductItem = React.createClass({
 	render: function() {
 		return (
 			<div className = "productItem">
-				<div className="productItem-picture"/>
-				<div className="ui labeled button" tabIndex="0">
-					<div className="ui red button">
-						<i className="heart icon"></i> Like
+				<Link to={`/product/${this.props.id}`}>
+					<div className="productItem-picture"/>
+					<div className="productItem-title">{this.props.product.title}</div>
+					<div className="productItem-shortDescription">{this.props.product.shortDescription}</div>
+					<div className="ui labeled button productItem-info">
+						<div className="ui red button">
+							<i className="heart icon"></i> Like
+						</div>
+						<div className="ui basic red left pointing label">0</div>
 					</div>
-					<a className="ui basic red left pointing label">0</a></div>
-				<Link to={`/product/${this.props.id}`}>link</Link>
+				</Link>
 			</div>
 		);
 	}

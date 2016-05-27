@@ -17,7 +17,6 @@ var Body = React.createClass({
 	componentDidMount: function() {
 		socket.on('Return fetchProducts', function (products) {
 			productActions.updateProducts(products);
-			console.log("received fetchProducts : ", products);
 		});
 		socket.emit('fetchProducts');
 		// Have the navigator stick to the page while scrolling
@@ -29,8 +28,8 @@ var Body = React.createClass({
 	},
 
 	render: function() {
-		console.log(this.state);
-		return (
+		console.log(this.state.productList);
+		return this.state ? (
 			<div id ="bodyContext">
 				<div className = "row">
 					<div className = "col-sm-1">
@@ -59,7 +58,7 @@ var Body = React.createClass({
 					</div>
 				</div>
 			</div>
-		);
+		) : ('');
 	},
 
 	scrollToTop: function() {
@@ -79,11 +78,17 @@ var Body = React.createClass({
 	},
 
 	renderProducts: function() {
-		var arrayContainer = Array.apply(null, Array(this.state.numberOfProducts)).map(function () {});
-		var products = arrayContainer.map(function(item, index) {
-			return (
-				<ProductItem id={index} key={index}/>
-			);
+		var displayAmount = this.state.numberOfProducts;
+		// var arrayContainer = Array.apply(null, Array(this.state.numberOfProducts)).map(function () {});
+		if (!this.state || !this.state.productList) return ('');
+		var products = this.state.productList.map(function(item, index) {
+			if (index < displayAmount) {
+				return (
+					<ProductItem id={item.productID} product={item} key={index}/>
+				);
+			} else {
+				return ('');
+			}
 		});
 
 		var renderComponents = (

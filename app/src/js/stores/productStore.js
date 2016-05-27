@@ -21,10 +21,7 @@ var productStore = Reflux.createStore({
     },
     // this will be called by all listening components as they register their listeners
     getInitialState: function() {
-        this.products = [{
-            id: 1,
-            description: "something"
-        }];
+        this.products = [];
         return this.products;
     }
 });

@@ -5,12 +5,41 @@
 	border-radius: 20px;
 	border-style: solid;
 	display: inline-block;
-	height: 281px;
+	height: 346px;
 	margin: 40px;
-	width: 198px;
+	width: 310px;
 }
 
 .prompt{
 	width:80%;
 	float:right;
+}
+
+.productItem-picture {
+	height: 142px;
+}
+
+.productItem-title {
+	font-size: 18px;
+	padding: 15px;
+	color: #333;
+	line-height: 25px;
+}
+
+.productItem-shortDescription {
+	font-size: 14px;
+	color: #888;
+	height: 80px;
+	padding: 15px;
+	padding-top: 0;
+	line-height: 21px;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	max-height: 63px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.productItem-info {
+	margin: 15px !important;
 }
