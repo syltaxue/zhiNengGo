@@ -5,7 +5,7 @@ var ProductItem = React.createClass({
 	render: function() {
 		return (
 			<div className = "productItem">
-				<Link to={`/product/${this.props.id}`}>
+				<Link to={`/product/${this.props.product.productID}`}>
 					<div className="productItem-picture"/>
 					<div className="productItem-title">{this.props.product.title}</div>
 					<div className="productItem-shortDescription">{this.props.product.shortDescription}</div>
