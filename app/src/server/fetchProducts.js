@@ -10,7 +10,7 @@ fetchProducts.prototype.fetchProducts = function () {
 			console.log('Error while performing Query.');
 		else 
 		{
-			console.log("rows", rows);
+			socket.emit('Return fetchProducts', rows);
 		}
 	});
 }

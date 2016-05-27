@@ -26,10 +26,6 @@ console.log('Server listening on port 80');
 // Socket.IO part
 var io = require('socket.io')(server);
 
-// var sendComments = function (socket) {
-// 	socket.emit('comments', "hello, sending initial fetches");
-// };
-
 io.on('connection', function (socket) {
 	console.log('New client connected!');
 
@@ -37,8 +33,16 @@ io.on('connection', function (socket) {
 		console.log('init!');
 	});
 
-	socket.on('fetchComments', function () {
-		sendComments(socket);
+	socket.on('fetchProducts', function () {
+		connection.query('SELECT * from product', function(err, rows, fields) {
+			connection.end();
+			if (err)
+				console.log('Error while performing Query.');
+			else 
+			{
+				socket.emit('Return fetchProducts', rows);
+			}
+		});
 	});
 
 	// socket.on('newComment', function (comment, callback) {

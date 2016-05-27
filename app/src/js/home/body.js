@@ -15,7 +15,11 @@ var Body = React.createClass({
 	},
 
 	componentDidMount: function() {
-		productActions.fetchProducts();
+		socket.on('Return fetchProducts', function (products) {
+			productActions.updateProducts(products);
+			console.log("received fetchProducts : ", products);
+		});
+		socket.emit('fetchProducts');
 		// Have the navigator stick to the page while scrolling
 		$('.ui.sticky')
 			.sticky({
