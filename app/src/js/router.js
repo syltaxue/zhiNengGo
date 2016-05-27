@@ -7,6 +7,8 @@ var Route = require('react-router').Route;
 var injectTapEventPlugin = require("react-tap-event-plugin");
 var Main = require('./home/main');
 var ProductPage = require('./productPage/main');
+var CreateAccount = require('./components/createAccount');
+var Login = require('./components/Login');
 injectTapEventPlugin();
 render((
 	<Router>
@@ -14,5 +16,7 @@ render((
 			<Route path="#" component={Main}/>
 		</Route>
 		<Route path="/product/:productId" component={ProductPage}/>
+		<Route path="/login" component={Login}/>
+		<Route path="/createAccount" component={CreateAccount}/>
 	</Router>
 ), document.getElementById("app"));

@@ -20,7 +20,7 @@ var Header = React.createClass({
 						<div className = "col-sm-1"></div>
 						<div className = "col-xs-4 col-sm-3">
 							<div className = "item" onClick={this._handleClick.bind(this, 'home')}>
-								<Link className="header-buttons-text" to={'/'}>智能GO</Link>
+								<Link className="header-buttons-text" to={'/'}>智能GO </Link>
 							</div>
 						</div>
 						<div className = "col-xs-6 col-sm-5">
@@ -36,9 +36,11 @@ var Header = React.createClass({
 								</div>
 							</div>
 						</div>
-						<div className = "col-xs-2 col-sm-2">
-							<div className = "header-login">
-								<RaisedButton label="登陆/注册" onClick={this._onClickLogin} primary={true} />
+						<div className="col-xs-2 col-sm-2">
+							<div className="header-login">
+								<Link to={`/login`}>
+									<RaisedButton label="登陆/注册" primary={true} />
+								</Link>
 							</div>
 						</div>
 						<div className= "col-sm-1"></div>
@@ -48,13 +50,10 @@ var Header = React.createClass({
 		);
 	},
 
-	_onClickLogin: function() {
-		window.alert("Login need to be implemented");
-	},
-
 	_onClickSearch: function() {
 		window.alert("Search clicked");
 	},
+
 	_handleClick: function(type) {
 		this.setState({active: type});
 	}
