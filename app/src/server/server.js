@@ -2,21 +2,9 @@ var path = require('path');
 var fs = require('fs');
 var express = require('express');
 var connection = require(__dirname + '/connection');
-// var fetchProducts = require(__dirname + '/fetchProducts');
 
 // Create an express instance and set a port variable
 var app = express();
-
-// Test connection
-// connection.connect(function(err){
-// 	if (!err) {
-// 		console.log("Database is connected ...");    
-// 	} else {
-// 		console.log("Error connecting database :", err);    
-// 	}
-// });
-
-
 
 var server = app.listen(80);
 console.log('Server listening on port 80');
