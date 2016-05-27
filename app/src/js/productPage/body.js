@@ -1,18 +1,25 @@
 var React = require('react');
+var Reflux = require('reflux');
 var ReactDOM = require('react-dom');
 var Picture = require('./../shared/Picture');
 var RaisedButton = require('material-ui/lib/raised-button');
-var Comment = require("./../components/comment");
-var commentTotal = 22;
-var Product = React.createClass({
-	componentDidMount: function() {
-		// Have the navigator stick to the page while scrolling
+var productStore = require("./../stores/productStore");
+var productActions = require("./../actions/productActions");
 
+var Product = React.createClass({
+	mixins: [Reflux.connect(productStore,"product")],
+	componentDidMount: function() {
+		// Fetch product details from server
+		socket.on('Return fetchProductByID', function (products) {
+			productActions.updateProducts(products);
+		});
+		socket.emit('fetchProductByID', this.props.productId);
 	},
 
 	render: function() {
-		console.log(this.props);
-		return (
+		console.log(this.state.product);
+		var product = this.state.product[0];
+		return product ? (
 			<div className = "productContainer">
 				<div id ="bodyContext">
 					<div className = "row">
@@ -20,7 +27,14 @@ var Product = React.createClass({
 						</div>
 						<div className = "col-xs-12 col-sm-10">
 							<div className="ui right rail"></div>
-							<div className="product-description">Product1 文字介绍</div>
+							<div className="product-title">Title: {product.title}</div>
+							<div>Category: {product.category}</div>
+							<div>createdTime: {product.createdTime}</div>
+							<div>description: {product.description}</div>
+							<div>link: {product.link}</div>
+							<div>price: {product.price}</div>
+							<div>productID: {product.productID}</div>
+							<div>shortDescription: {product.shortDescription}</div>
 							<div className='product-picture'><Picture/></div>
 							<RaisedButton label="查看详情" onClick={this._onClicktoDetail} primary={true} />
 								<div className="share-button">分享到</div>
@@ -34,7 +48,7 @@ var Product = React.createClass({
 					</div>
 				</div>
 			</div>
-		);
+		) : (<div/>);
 	},
 
 	_onClicktoDetail: function() {

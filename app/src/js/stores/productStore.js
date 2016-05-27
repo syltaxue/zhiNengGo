@@ -1,6 +1,6 @@
 var Reflux = require("reflux");
 var productActions = require("./../actions/productActions");
-var products = {};
+var products = [];
 
 var productStore = Reflux.createStore({
     // this will set up listeners to all publishers in TodoActions, using onKeyname (or keyname) as callbacks

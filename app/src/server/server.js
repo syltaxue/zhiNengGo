@@ -22,7 +22,7 @@ io.on('connection', function (socket) {
 	socket.on('fetchProducts', function () {
 		connection.query('SELECT * from product', function(err, rows, fields) {
 			if (err)
-				console.log('Error while performing Query.');
+				console.log('Error while performing Query fetchProducts.');
 			else 
 			{
 				socket.emit('Return fetchProducts', rows);
@@ -30,6 +30,16 @@ io.on('connection', function (socket) {
 		});
 	});
 
+	socket.on('fetchProductByID', function (productID) {
+		connection.query('SELECT * from product WHERE productID = ' + productID + ' ', function(err, rows, fields) {
+			if (err)
+				console.log('Error while performing Query fetchProductByID.', err);
+			else 
+			{
+				socket.emit('Return fetchProductByID', rows);
+			}
+		});
+	});
 	// socket.on('newComment', function (comment, callback) {
 	// 	fs.readFile('_comments.json', 'utf8', function(err, comments) {
 	// 		comments = JSON.parse(comments);
