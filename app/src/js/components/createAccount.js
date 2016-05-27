@@ -19,9 +19,7 @@ var createAccount = React.createClass({
 									<input type="text" className="form-control" name="lastname" placeholder="LastName" required/>
 									<div className=" inputTitle">First Name</div>
 									<input type="text" className="form-control" name="firstname" placeholder="FirstName" required/>
-									<button id="submitBtn" className="btn btn-lg btn-primary btn-block" type="submit" onclick="verifyPW(event);">
-										Submit
-									</button>
+									<button id="submitBtn" className="btn btn-lg btn-primary btn-block createAccount-submitButton" type="submit" onclick="verifyPW(event);">Submit</button>
 							</form>
 						</div>
 					</div>

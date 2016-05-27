@@ -15,9 +15,9 @@ var login = React.createClass({
 								<input type="text" name="username" className="form-control" placeholder="Username" required autofocus/>
 								<input type="password" name="password" className="form-control" placeholder="Password" required/>
 								<div className="login-buttons">
-									<button className="btn btn-lg btn-primary btn-block login-button login-firstButton" type="submit">Sign in</button>
-									<Link to={`/createAccount`}>
-										<button className="btn btn-lg btn-primary btn-block login-button" type="submit">Create Account</button>
+									<button className="btn btn-lg btn-primary btn-block login-button login-firstButton" type="submit">登录</button>
+									<Link className="login-link" to={`/createAccount`}>
+										<button className="btn btn-lg btn-primary btn-block login-button" type="submit">新用户</button>
 									</Link>
 								</div>
 							</form>
