@@ -68,3 +68,17 @@
 {
     margin-top: 10px;
 }
+
+.login-buttons{
+    display: flex;
+}
+
+.login-button{
+    padding: 15px;
+    flex: 1;
+    margin-top: 0 !important;
+}
+
+.login-firstButton {
+    margin-right: 20px;
+}

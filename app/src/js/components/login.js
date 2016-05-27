@@ -1,5 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Link = require('react-router').Link;
+
 var login = React.createClass({
 	render: function() {
 		return (
@@ -12,9 +14,12 @@ var login = React.createClass({
 							<form className="form-signin" method="post">
 								<input type="text" name="username" className="form-control" placeholder="Username" required autofocus/>
 								<input type="password" name="password" className="form-control" placeholder="Password" required/>
-								<button className="btn btn-lg btn-primary btn-block" type="submit">
-								Sign in
-								</button>
+								<div className="login-buttons">
+									<button className="btn btn-lg btn-primary btn-block login-button login-firstButton" type="submit">Sign in</button>
+									<Link to={`/createAccount`}>
+										<button className="btn btn-lg btn-primary btn-block login-button" type="submit">Create Account</button>
+									</Link>
+								</div>
 							</form>
 						</div>
 					</div>
