@@ -71,9 +71,13 @@ var Body = React.createClass({
 				<button className="ui loading button" id="loadMoreBtn">Loading</button>
 			);
 		} else {
-			return (
-				<button className="ui button" id="loadMoreBtn" onClick={this.loadMoreProducts}>点击加载更多</button>
-			);
+			if (this.state.productList.size < this.state.numberOfProducts) {
+				return (
+					<button className="ui button" id="loadMoreBtn" onClick={this.loadMoreProducts}>点击加载更多</button>
+				);
+			} else {
+				return ('');
+			}
 		}
 	},
 
