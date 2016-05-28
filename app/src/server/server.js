@@ -40,6 +40,18 @@ io.on('connection', function (socket) {
 			}
 		});
 	});
+
+	socket.on('validateLogin', function (longinInfo) {
+		connection.query('SELECT * from user WHERE userName = "' + longinInfo.username + '" AND passWord = "' + longinInfo.password + '" ', function(err, rows, fields) {
+			if (err)
+				console.log('Error while performing Query fetchProductByID.', err);
+			else 
+			{
+				socket.emit('Return validateLogin', rows);
+			}
+		});
+	});
+	
 	// socket.on('newComment', function (comment, callback) {
 	// 	fs.readFile('_comments.json', 'utf8', function(err, comments) {
 	// 		comments = JSON.parse(comments);
