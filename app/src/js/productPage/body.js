@@ -8,6 +8,11 @@ var productActions = require("./../actions/productActions");
 
 var Product = React.createClass({
 	mixins: [Reflux.connect(productStore,"product")],
+	getInitialState: function() {
+		return {
+			product: []
+		};
+	},
 	componentDidMount: function() {
 		// Fetch product details from server
 		socket.on('Return fetchProductByID', function (products) {

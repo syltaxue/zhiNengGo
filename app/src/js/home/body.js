@@ -9,6 +9,7 @@ var Body = React.createClass({
 	mixins: [Reflux.connect(productStore,"productList")],
 	getInitialState: function() {
 		return {
+			productList: [],
 			loadingMoreItem: false,
 			numberOfProducts: 10
 		};
