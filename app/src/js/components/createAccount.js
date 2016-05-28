@@ -15,10 +15,12 @@ var createAccount = React.createClass({
 									<input id="password" type="password" className="form-control" name="password" placeholder="Password" required/>
 									<div className=" inputTitle">Password again</div>
 									<input id="passwordConfirm" type="password" className="form-control" name="passwordConfirm" placeholder="Confirm Password" required/>
-									<div className=" inputTitle">Last Name</div>
-									<input type="text" className="form-control" name="lastname" placeholder="LastName" required/>
-									<div className=" inputTitle">First Name</div>
-									<input type="text" className="form-control" name="firstname" placeholder="FirstName" required/>
+									<div className=" inputTitle">昵称</div>
+									<input type="text" className="form-control" placeholder="Nick Name" required/>
+									<div className=" inputTitle">邮件</div>
+									<input type="text" className="form-control" name="firstname" placeholder="邮件" required/>
+									<div className=" inputTitle">手机号码</div>
+									<input type="text" className="form-control" name="firstname" placeholder="手机号码" required/>
 									<button id="submitBtn" className="btn btn-lg btn-primary btn-block createAccount-submitButton" type="submit" onclick="verifyPW(event);">Submit</button>
 							</form>
 						</div>
