@@ -44,14 +44,31 @@ io.on('connection', function (socket) {
 	socket.on('validateLogin', function (longinInfo) {
 		connection.query('SELECT * from user WHERE userName = "' + longinInfo.username + '" AND passWord = "' + longinInfo.password + '" ', function(err, rows, fields) {
 			if (err)
-				console.log('Error while performing Query fetchProductByID.', err);
+				console.log('Error while performing Query validateLogin.', err);
 			else 
 			{
 				socket.emit('Return validateLogin', rows);
 			}
 		});
 	});
-	
+
+	socket.on('createAccount', function (accountInfo) {
+		connection.query('INSERT INTO user (userName, passWord, displayName, point, accountType, email, phoneNum, avatar) VALUES('
+			+ accountInfo.username + ',' + accountInfo.password + ',' + accountInfo.nickName + ', 0, "local", '+ accountInfo.email + ',' + accountInfo.phone +', null) ', function(err, rows, fields) {
+			if (err) {
+				if (err.code = 1062) {
+					console.log("1")
+					socket.emit('Return createAccount', {error: 1062});
+				}
+				console.log('Error while performing Query createAccount.', err);
+			}
+			else 
+			{
+				console.log("2")
+				socket.emit('Return createAccount', {success: rows.affectedRows});
+			}
+		});
+	});
 	// socket.on('newComment', function (comment, callback) {
 	// 	fs.readFile('_comments.json', 'utf8', function(err, comments) {
 	// 		comments = JSON.parse(comments);

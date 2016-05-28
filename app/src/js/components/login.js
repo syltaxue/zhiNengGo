@@ -39,6 +39,7 @@ var login = React.createClass({
 			userActions.updateUser(userInfo);
 			if (!userInfo.length) {
 				window.alert("Login not successful, please verify your username and password.");
+				socket.removeListener("Return validateLogin");
 			} else {
 				history.pushState(null, '/');
 			}
