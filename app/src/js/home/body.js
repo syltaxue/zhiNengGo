@@ -29,7 +29,7 @@ var Body = React.createClass({
 	},
 
 	render: function() {
-		console.log(this.state.productList);
+		console.log(this.state);
 		return this.state ? (
 			<div id ="bodyContext">
 				<div className = "row">

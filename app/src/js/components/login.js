@@ -41,7 +41,9 @@ var login = React.createClass({
 				window.alert("Login not successful, please verify your username and password.");
 				socket.removeListener("Return validateLogin");
 			} else {
+				sessionStorage.login = JSON.stringify(userInfo[0]);
 				history.pushState(null, '/');
+				socket.removeListener("Return validateLogin");
 			}
 		});
 		socket.emit('validateLogin', loginInfo);

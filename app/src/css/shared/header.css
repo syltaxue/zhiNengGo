@@ -3,6 +3,9 @@
 	color: #66b3ff;
 
 }
+	.header-login {
+		display: flex;
+	}
 	.header-container {
 		padding: 20px 0;
 		font-weight: bold;
@@ -23,4 +26,9 @@
 	width: 35px;
 	margin-left: -37px;
 	margin-top: 1px;
+}
+
+.header-login-user {
+	margin-top: 10px;
+	padding-right: 10px;
 }

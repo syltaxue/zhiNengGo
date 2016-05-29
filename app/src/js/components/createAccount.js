@@ -52,7 +52,9 @@ var createAccount = React.createClass({
 					window.alert("Sorry, the username you choose has been taken, please choose another username");
 					socket.removeListener("Return createAccount");
 				} else {
-					history.pushState(null, '/');
+					window.alert("注册成功");
+					history.pushState(null, '/login');
+					socket.removeListener("Return createAccount");
 				}
 			});
 			socket.emit('createAccount', accInfo);
