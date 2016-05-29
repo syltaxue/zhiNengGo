@@ -65,7 +65,7 @@ var Header = React.createClass({
 	},
 
 	_renderUserStats: function() {
-		var loginStorage = JSON.parse(sessionStorage.login);
+		var loginStorage = sessionStorage.login ? JSON.parse(sessionStorage.login) : null;
 		if ((this.state && this.state.user && this.state.user[0] && this.state.user[0].userName)) {
 			return (
 				<div className="header-login">
