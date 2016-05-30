@@ -3,6 +3,9 @@
 	flex-direction: column;
 	top: 0 !important;
 	bottom: auto !important;
+	margin: 0;
+	min-height: auto !important;
+	border-color: purple;
 }
 	.navigator-container {
 		background-color: blueviolet;
@@ -10,7 +13,7 @@
 	.navigator-picture {
 		height: 400px;
 		background-color: antiquewhite;
-		margin: 20px 50px;
+		margin: 0;
 	}
 	.navigator-buttons {
 		display: flex;
@@ -33,4 +36,17 @@
 
 .item {
 	justify-content: center;
+}
+
+.nav-dropDown-subMenu .dropdown-menu {
+	right: -101%;
+	top: 0 !important;
+}
+
+.carousel-inner, {
+	height: 500px;
+}
+
+.carousel-inner .active, .navigator-picture {
+	height: 600px !important;
 }
